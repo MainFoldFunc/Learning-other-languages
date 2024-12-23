@@ -1,4 +1,4 @@
-package cutpack
+package custpack
 
 func Reverse(s string) string {
 	var resoult string
