@@ -1,0 +1,4 @@
+C:\Users\gsliv\OneDrive\Dokumenty\C#\My_First_C#_APP\My_First_C#_APP\obj\Debug\net8.0\My_First_C#_APP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gsliv\OneDrive\Dokumenty\C#\My_First_C#_APP\My_First_C#_APP\obj\Debug\net8.0\My_First_C#_APP.AssemblyInfoInputs.cache
+C:\Users\gsliv\OneDrive\Dokumenty\C#\My_First_C#_APP\My_First_C#_APP\obj\Debug\net8.0\My_First_C#_APP.AssemblyInfo.cs
+C:\Users\gsliv\OneDrive\Dokumenty\C#\My_First_C#_APP\My_First_C#_APP\obj\Debug\net8.0\My_First_C#_APP.csproj.CoreCompileInputs.cache
