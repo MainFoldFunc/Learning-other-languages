@@ -1,47 +1,43 @@
 package main
 
-import(
+import (
 	"fmt"
 	"log"
 	"net/http"
 )
 
-func helloHandler(w http.ResponseWriter, r *http.Request){
-	if r.URL.Path != "/hello"{
-		http.Error(w, "404 not foumd", http.StatusNotFound)
-		return 
-	}
-	if r.Method != "GET"{
-		http.Error(w, "Method is not suported", http.StatusNotFound)
+func formHandler(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		fmt.Fprintf(w, "ParseForm() err: %v", err)
 		return
 	}
-	fmt.Println(w, "Hello world")
-}
-
-func formHandler (w http.ResponseWriter, r *http.Request){
-	err := r.ParseForm()
-	if err != nil {
-		fmt.Printf(w, "ParseForm() error: %v"err)
-	}
-	fmt.Fprintf(w, "POST request succesful")
+	fmt.Fprintf(w, "POST request successful")
 	name := r.FormValue("name")
-	adress := r.FormValue("adress")
-	fmt.Fprintf(w, "Name: %v\nAdress: %v", name, adress)
+	address := r.FormValue("address")
+	fmt.Fprintf(w, "Name = %s\n", name)
+	fmt.Fprintf(w, "Address = %s\n", address)
 }
 
-func main(){
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/hello" {
+		http.Error(w, "404 not found", http.StatusNotFound)
+		return
+	}
+	if r.Method != "GET" {
+		http.Error(w, "method is not supported", http.StatusNotFound)
+		return
+	}
+	fmt.Fprintf(w, "hello!")
+}
+
+func main() {
 	fileServer := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fileServer)
 	http.HandleFunc("/form", formHandler)
 	http.HandleFunc("/hello", helloHandler)
 
-	fmt.Printf("Strting the server at port 8080\n")
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil{
+	fmt.Printf("Starting server at port 8080\n")
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
 	}
-
-
-
 }
-
