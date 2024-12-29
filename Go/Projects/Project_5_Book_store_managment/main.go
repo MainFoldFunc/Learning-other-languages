@@ -5,13 +5,13 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project_5_Book_store_managment/PKG/routes/bookstore-routes.go"
+	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project5_Book_store_Management/PKG/routes"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 func main() {
 	r := mux.NewRouter()
-	routes.RegisterBookStoreRoutes(r) // Ensure this function is implemented in the routes package
+	routes.RegisterBookStoreRoutes(r)
 	http.Handle("/", r)
 
 	log.Println("Starting server on localhost:9010...")
