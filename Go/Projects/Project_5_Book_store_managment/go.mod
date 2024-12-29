@@ -8,4 +8,5 @@ require (
 	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/mattn/go-sqlite3 v1.14.0 // indirect
+	github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project5_Book_store_Management/PKG
 )
