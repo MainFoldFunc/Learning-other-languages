@@ -9,7 +9,7 @@ import (
 )
 
 // GetBook handles GET requests to retrieve all books
-func GetBook(w http.ResponseWriter, r *http.Request) {
+func GetBooK(w http.ResponseWriter, r *http.Request) {
     books := GetAllBooks()
     res, err := json.Marshal(books)
     if err != nil {
@@ -48,7 +48,7 @@ func GetBookBYID(w http.ResponseWriter, r *http.Request) {
 }
 
 // CreateBook handles POST requests to create a new book
-func CreateBook(w http.ResponseWriter, r *http.Request) {
+func CreateBooK(w http.ResponseWriter, r *http.Request) {
     createBook := &Book{}
     ParseBody(r, createBook)
 
@@ -64,7 +64,7 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 }
 
 // UpdateBook handles PUT requests to update an existing book
-func UpdateBook(w http.ResponseWriter, r *http.Request) {
+func UpdateBooK(w http.ResponseWriter, r *http.Request) {
     var updateBook Book
     ParseBody(r, &updateBook)
 
@@ -105,7 +105,7 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 }
 
 // DeleteBook handles DELETE requests to remove a book
-func DeleteBook(w http.ResponseWriter, r *http.Request) {
+func DeleteBooK(w http.ResponseWriter, r *http.Request) {
     vars := mux.Vars(r)
     bookID := vars["bookID"]
     ID, err := strconv.ParseInt(bookID, 0, 64)
