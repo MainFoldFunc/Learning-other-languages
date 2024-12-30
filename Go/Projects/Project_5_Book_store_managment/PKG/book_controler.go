@@ -7,8 +7,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project5_Book_store_Management/PKG"
-	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project5_Book_store_Management/PKG"
+	"PKG"
 )
 
 var NewBook models.Book

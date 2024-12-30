@@ -2,7 +2,7 @@ package PKG
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project5_Book_store_Management/PKG"
+	"PKG"
 )
 
 var db *gorm.DB
