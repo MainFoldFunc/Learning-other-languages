@@ -2,7 +2,7 @@ package PKG
 
 import (
 	"github.com/gorilla/mux"
-	"PKG"
+	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project_5_Book_store_managment/PKG"
 )
 
 var RegisterBookStoreRoutes = func(router *mux.Router) {
