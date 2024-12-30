@@ -1,4 +1,4 @@
-package config
+package PKG
 
 import (
 	"github.com/jinzhu/gorm"

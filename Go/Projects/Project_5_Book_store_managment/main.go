@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project5_Book_store_Management/PKG"
+	"PKG"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 

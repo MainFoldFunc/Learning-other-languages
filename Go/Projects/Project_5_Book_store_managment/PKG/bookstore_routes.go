@@ -1,4 +1,4 @@
-package routes
+package PKG
 
 import (
 	"github.com/gorilla/mux"

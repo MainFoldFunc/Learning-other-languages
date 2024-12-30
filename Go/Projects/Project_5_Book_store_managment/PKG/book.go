@@ -1,4 +1,4 @@
-package models
+package PKG
 
 import (
 	"github.com/jinzhu/gorm"
