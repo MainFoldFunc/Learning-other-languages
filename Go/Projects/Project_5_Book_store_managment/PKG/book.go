@@ -2,7 +2,6 @@ package PKG
 
 import (
 	"github.com/jinzhu/gorm"
-	"PKG"
 )
 
 var db *gorm.DB

@@ -7,9 +7,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/MainFoldFunc/Learning-other-languages/Go/Projects/Project_5_Book_store_managment/PKG"
 )
-
 var NewBook models.Book
 
 func GetBook(w http.ResponseWriter, r *http.Request) {
