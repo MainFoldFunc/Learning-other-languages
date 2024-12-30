@@ -11,7 +11,7 @@ import (
 
 func main() {
 	r := mux.NewRouter()
-	routes.RegisterBookStoreRoutes(r)
+	PKG.RegisterBookStoreRoutes(r)
 	http.Handle("/", r)
 
 	log.Println("Starting server on localhost:9010...")
@@ -19,4 +19,5 @@ func main() {
 		log.Fatalf("Server failed to start: %v", err)
 	}
 }
+
 
