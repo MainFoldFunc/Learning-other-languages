@@ -2,7 +2,6 @@ package PKG
 
 import (
     "encoding/json"
-    "fmt"
     "net/http"
     "strconv"
 
@@ -23,7 +22,7 @@ func GetBook(w http.ResponseWriter, r *http.Request) {
 }
 
 // GetBookByID handles GET requests to retrieve a book by its ID
-func GetBookByID(w http.ResponseWriter, r *http.Request) {
+func GetBookBYID(w http.ResponseWriter, r *http.Request) {
     vars := mux.Vars(r)
     bookID := vars["bookID"]
     ID, err := strconv.ParseInt(bookID, 0, 64)
